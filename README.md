@@ -1,18 +1,18 @@
 # docker-unbound
 
-# Localrecords Examples...
-#
-#
-# To replace entries use a file in this format or
-# add entries to variable DNSENTRIES in the format FQDN@IP
-#
-# for example to create following entries we used
-# DNSENTRIES="ten.zero.zero.one@10.0.0.1 ten.zero.zero.two@10.0.0.2"
-
-#local-data: "ten.zero.zero.one. A 10.0.0.1"
-#local-data-ptr: "10.0.0.1 ten.zero.zero.one."
-#local-data: "ten.zero.zero.two. A 10.0.0.2"
-#local-data-ptr: "10.0.0.2 ten.zero.zero.two."
+ Localrecords Examples...
 
 
-docker run -d -P  -e DNSENTRIES="ten.zero.zero.one@10.0.0.1 ten.zero.zero.two@10.0.0.2" frjaraur/docker-unbound
+ To replace entries use a file in this format or
+ add entries to variable DNSENTRIES in the format FQDN@IP
+
+ for example to create following entries we used
+ DNSENTRIES="ten.zero.zero.one@10.0.0.1 ten.zero.zero.two@10.0.0.2"
+
+local-data: "ten.zero.zero.one. A 10.0.0.1"
+local-data-ptr: "10.0.0.1 ten.zero.zero.one."
+local-data: "ten.zero.zero.two. A 10.0.0.2"
+local-data-ptr: "10.0.0.2 ten.zero.zero.two."
+
+
+docker run -d -P  -e DNSENTRIES="ten.zero.zero.one@10.0.0.1 ten.zero.zero.two@10.0.0.2" frjaraur/docker-simple-unbound
