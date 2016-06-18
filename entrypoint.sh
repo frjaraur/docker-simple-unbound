@@ -1,6 +1,6 @@
 #!/bin/sh
 
-[ ! -n "${DNSENTRIES}"" ] && exec $@
+[ ! -n "${DNSENTRIES} ] && exec $@
 
 RECORDS_FILE=/etc/unbound/localrecords.conf
 
