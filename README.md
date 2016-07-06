@@ -1,5 +1,10 @@
 # docker-unbound
 
+You can use DNSSERVERS variable for changing default google forwarders to your own servers
+
+docker run -d -P -e DNSSERVERS="208.67.222.222 208.67.220.220" frjaraur/docker-simple-unbound
+
+
 Localrecords Examples...
 
 
@@ -22,6 +27,12 @@ docker run -d -P  -e DNSENTRIES="ten.zero.zero.one@10.0.0.1 ten.zero.zero.two@10
 
 
 ###########
+
+EXAMPLE:
+
+docker run -d -P -e DNSSERVERS="208.67.222.222 208.67.220.220" -e DNSENTRIES="ten.zero.zero.one@10.0.0.1 ten.zero.zero.two@10.0.0.2" frjaraur/docker-simple-unbound
+
+
 NOTE:
 Instead of DNSENTRIES variable, you can create your own "localrecords.conf" file and use it...
 
